@@ -1,0 +1,15 @@
+main{
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px 100px;
+}
+
+
+@media screen and (max-width : 768px) {
+    main{
+        padding: 10px;
+        margin-top: 80px;
+    }
+}

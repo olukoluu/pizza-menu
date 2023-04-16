@@ -1,0 +1,53 @@
+.card{
+    box-shadow: 0px 0px 7px rgba(88, 88, 88, 0.377);
+    width: 30%;
+    padding: 0 10px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .3s ease-in-out;
+}
+
+.card:hover .card__img{
+    transform: scale(1.08);
+}
+
+.card__img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.card__text{
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+.card__text h3{
+    font-size: 18px;
+}
+
+.card > button{
+    background-color: rgba(253, 0, 253, 0.685);
+    color: #f5f5f5;
+    border: none;
+    margin-top: 15px;
+    width: 80%;
+    font-size: 15px;
+    font-weight: bold;
+    transition: .3s ease-in-out;
+}
+
+.card > button:hover{
+    background-color: transparent;
+    color: rgba(253, 0, 253, 0.685);
+    box-shadow: 1px 1px 5px rgba(88, 88, 88, 0.377);
+}
+
+
+@media screen and (max-width : 768px) {
+    .card{
+        width: 47%;
+    }
+}
