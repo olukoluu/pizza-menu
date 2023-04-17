@@ -6,12 +6,24 @@ import Button from "../../UI/button/Button";
 const Cart = (props) => {
   const cartArray = props.cartArray;
   const setCartArray = props.setCartArray;
+  
+  const handleQuantity = (productId, count) => {
+    setCartArray((prevState) => {
+      prevState.map(item => {
+        if (item.id === productId) {
+          item.count = count;
+        }
+        return item
+      })
+      return [...prevState];
+    });
+  };
 
   const deleteItem = (item) => {
     setCartArray((prevArray) =>
       prevArray.filter((arrayItem) => arrayItem.id !== item.id)
     );
-    props.handleQuantity();
+    handleQuantity();
   };
 
   const handleCheckout = () => {
@@ -31,7 +43,7 @@ const Cart = (props) => {
         title={item.title}
         price={item.price}
         count={item.count}
-        handleQuantity={props.handleQuantity}
+        handleQuantity={handleQuantity}
         deleteItem={() => deleteItem(item)}
       />
     );

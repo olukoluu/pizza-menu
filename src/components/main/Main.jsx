@@ -8,18 +8,6 @@ import "./main.css";
 const Main = (props) => {
   const [cartArray, setCartArray] = useState([]);
 
-  const handleQuantity = (productId, count) => {
-    setCartArray((prevState) => {
-      prevState.map(item => {
-        if (item.id === productId) {
-          item.count = count;
-        }
-        return item
-      })
-      return [...prevState];
-    });
-  };
-
   const handleAddToCart = (item) => {
     const newItem = {
       ...item,
@@ -55,7 +43,6 @@ const Main = (props) => {
         isCartOpen={props.isCartOpen}
         cartArray={cartArray}
         setCartArray={setCartArray}
-        handleQuantity={handleQuantity}
       />
     </main>
   );

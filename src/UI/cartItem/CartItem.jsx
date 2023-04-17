@@ -21,6 +21,7 @@ const CartItem = (props) => {
       }
     });
   };
+  
 
   const increaseHandler = () => {
     setCount((prevCount) => {
